@@ -1,0 +1,1 @@
+Projeto para aprender mais sobre OOP, SQL e Interfaces Gráficas.

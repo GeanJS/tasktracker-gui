@@ -35,3 +35,12 @@ class Task:
     @completed.setter
     def completed(self, new_date: datetime):
         self.__completed = new_date
+        
+        
+    def get_data(self):
+        return {
+            "descriptiom": self.__description,
+            "status": self.__status,
+            "creation_date": self.__created,
+            "completion_date": self.__completed
+        }

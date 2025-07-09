@@ -9,7 +9,7 @@ class TaskController:
         self.__task_dao = TaskDAO()
         
         
-    def beginning(self):
+    def initialize(self):
         while True:
             option = self.__task_view.task_menu()
             match option:
@@ -22,10 +22,8 @@ class TaskController:
 
     
     def add_task(self):
-        print("opa")
         data = self.__task_view.add_task()
         if data is None:
-            print("opa")
             self.__task_view.show_message("Task register cancelled")
             return
         
@@ -36,11 +34,10 @@ class TaskController:
         )
         
         self.__task_dao.add(task)
-        print("aqui")
         self.__task_view.show_message("Task registered successfully")
     
     
     def show_all_tasks(self):
         tasks_to_list = self.__task_dao.list()
-        self.__task_view.show_all_tasks(tasks_to_list)
+        self.__task_view.show_tasks(tasks_to_list)
         

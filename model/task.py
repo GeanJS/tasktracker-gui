@@ -39,7 +39,7 @@ class Task:
         
     def get_data(self):
         return {
-            "descriptiom": self.__description,
+            "description": self.__description,
             "status": self.__status,
             "creation_date": self.__created,
             "completion_date": self.__completed
